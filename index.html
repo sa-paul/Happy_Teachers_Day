@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Teachers Day</title>
+    <style>
+        /* Common styles for all screen sizes */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally on all screen sizes */
+            justify-content: center; /* Center content vertically on all screen sizes */
+            min-height: 100vh; /* Ensure the content takes up the entire viewport height */
+
+        }
+
+        header {
+            position: sticky;
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            border-radius: .8rem;
+            /* padding: 20px 0; */
+        }
+
+        h1 {
+            font-size: 3rem;
+            padding: 2rem;
+        }
+        .btnclk{
+            margin: 3rem;
+        }
+        .btn {
+            background-color: #007BFF;
+            border-radius: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            top: 1rem;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Close button for the modal */
+        .close {
+            position: absolute;
+            top: .8rem;
+            right: .8rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* Styling for the sidebar */
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            overflow-y: auto;
+        }
+        .content{
+            padding: 1rem;
+            margin-bottom: 8rem;
+        }
+
+        /* Styling for the footer */
+        footer {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: .8rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Happy Teachers Day</h1>
+    </header>
+    <div class="btnclk">
+        <button class="btn" onclick="openModal()">Click Me</button>
+    </div>
+   
+   
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>প্রাণেশ্বরের চরণে, স্বয়ং কে প্রদান করে, যে 
+                জ্ঞানের প্রদীপ আলোকিত ক'রে,
+                সে পরম গুরুর প্রতি মাথা নমি।
+            </p>
+            <p>At the divine feet, who bestows self,
+                Illuminating the lamp of knowledge,
+                To that supreme guru, I bow my head.</p>
+            <p>&#128591; লহ প্রণাম &#x1F64F;</p>
+        </div>
+    </div>
+
+
+    <!-- <div class="sidebar">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel ullamcorper lectus. Sed id turpis
+            euismod, posuere orci non, hendrerit tortor. Ut eu sollicitudin lectus.</p>
+    </div> -->
+
+
+    <div class="content">
+        <h3>गुरू ब्रह्मा गुरू विष्णु,गुरु देवो महेश्वरा,<br> गुरु साक्षात परब्रह्म, तस्मै श्री गुरुवे नमः</h2>
+        <p><br></p>
+        <p>In the garden of knowledge, they sow the seeds,</p>
+        <p>Nurturing young minds with all their needs.</p>
+        <p>With patience and love, they tend to the bloom,</p>
+        <p>Guiding the way in a world of gloom.</p>
+        <p><br></p>
+        <p>They ignite the light of curiosity,</p>
+        <p>Inspiring a lifelong love for diversity.</p>
+        <p>With wisdom and care, they pave the way,</p>
+        <p>For futures bright, come what may.</p>
+        <p><br></p>
+        <p>Through lessons of life, they teach us to strive,</p>
+        <p>To never give up, to stay alive.</p>
+        <p>Their words are a beacon in the darkest of night,</p>
+        <p>Guiding us toward the path that's right.</p>
+        <p><br></p>
+        <p>On this special day, we honor and say,</p>
+        <p>To our teachers, in every way,</p>
+        <p>Thank you for your unwavering art,</p>
+        <p>For you possess a teacher's heart.</p>
+        <p><br></p>
+        <p>Happy Teacher's Day!</p>
+        <p><br></p>
+        <p><br></p>
+        <p>লেখাপড়া শিখিয়ে যারা,</p>
+        <p>জ্বালেন জ্ঞানের আলো,</p>
+        <p>শাসন করেন, জীবন গড়েন,</p>
+        <p>বাসেন যারা ভালো,</p>
+        <p>যাদের কাছে মানুষ হবার,</p>
+        <p>স্বপ্ন দেখার শুরু,</p>
+        <p>তাদের পায়ে প্রণাম জানাই,</p>
+        <p>তারাই পরম গুরু।</p>
+        <p><br></p>
+        <p>শিক্ষক আর শিক্ষিকারা,</p>
+        <p>নয় কেউ ভাই পর,</p>
+        <p>কারণ তারাই মানুষ গড়ার,</p>
+        <p>প্রধান কারিগর।</p>
+        <p><br></p>
+        <p>ওদের স্নেহ ভালবাসার,</p>
+        <p>তুলনা নেই আর,</p>
+        <p>আজ শিক্ষক দিবসে তাই,</p>
+        <p>জানাই নমস্কার।</p>
+    </div>
+    <img src="" alt="" >
+
+    <footer>
+        <p>Designed & Built with Love for you - Sayan Paul © [2023]</p>
+        <button onclick="goToTop()" style="background-color: #fff; color: #007BFF; font-weight: 700; border-radius: 1rem; font-size: 1rem; padding: .5rem 1rem; border: none; cursor: pointer;">Go to Top</button>
+    </footer>
+    <script>
+        // Function to open the modal
+        function openModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        // Function to scroll to the top of the page
+        function goToTop() {
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
